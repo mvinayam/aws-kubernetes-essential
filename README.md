@@ -1,1 +1,2 @@
-# aws-kubernetes-essential
+# eventsappstart
+This is a simple events app
