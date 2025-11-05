@@ -1,9 +1,9 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
+  name: events-api
   labels:
     app: events-api
-  name: events-api
 spec:
   replicas: 1
   selector:
@@ -17,7 +17,7 @@ spec:
         ver: v1.0
     spec:
       containers:
-      - image: mvinayam/events-api:v1.0
-        name: events-api
-        ports:
-        - containerPort: 8082
+        - name: events-api
+          image: mvinayam/events-api:v1.0
+          ports:
+            - containerPort: 8082
